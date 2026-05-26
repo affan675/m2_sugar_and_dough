@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact & Order | Sugar & Dough Bakery</title>
+    <meta name="description" content="Get in touch with Sugar & Dough Bakery in Koramangala. Order online for pickup, find our address, hours, and contact info.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥐</text></svg>">
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo" aria-label="Sugar & Dough Home">
+                <span class="logo__icon">🥐</span>
+                <span class="logo__text">Sugar <span class="logo__amp">&</span> Dough</span>
+            </a>
+
+            <nav class="nav" id="nav" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link">Menu</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link nav__link--active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero page-hero--contact">
+            <div class="container">
+                <h1 class="page-hero__title">Get In Touch</h1>
+                <p class="page-hero__subtitle">We'd love to hear from you. Order ahead for pickup!</p>
+            </div>
+        </section>
+
+        <!-- Info + Map Section -->
+        <section class="section contact-info-section" id="contact-info">
+            <div class="container contact-info__grid">
+                <!-- Business Info Card -->
+                <div class="contact-info__card">
+                    <h2 class="section__title">Visit Us</h2>
+                    <ul class="contact-details">
+                        <li class="contact-details__item">
+                            <span class="contact-details__icon">📍</span>
+                            <div>
+                                <strong>Address</strong>
+                                <p>123, 5th Block, Koramangala<br>Bengaluru, Karnataka 560095</p>
+                            </div>
+                        </li>
+                        <li class="contact-details__item">
+                            <span class="contact-details__icon">📞</span>
+                            <div>
+                                <strong>Phone</strong>
+                                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                            </div>
+                        </li>
+                        <li class="contact-details__item">
+                            <span class="contact-details__icon">✉️</span>
+                            <div>
+                                <strong>Email</strong>
+                                <p><a href="mailto:rohan@sugaranddough.com">rohan@sugaranddough.com</a></p>
+                            </div>
+                        </li>
+                        <li class="contact-details__item">
+                            <span class="contact-details__icon">🕐</span>
+                            <div>
+                                <strong>Hours</strong>
+                                <p>Tue – Sun: 9:00 AM – 9:00 PM<br><em>Closed on Mondays</em></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Google Maps Embed (exact location) -->
+                <div class="contact-info__map">
+                    <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.6!2d77.6205!3d12.9352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae141e0f5f5b6b%3A0x1e2c3b4a5d6e7f8!2s123%2C%205th%20Block%2C%20Koramangala%2C%20Bengaluru!5e0!3m2!1sen!2sin!4v1700000000000"
+                    width="100%"
+                    height="320"
+                    style="border:0; border-radius: 12px;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Sugar & Dough Bakery location in Koramangala"
+                    >
+                </iframe>
+                <p class="map-note">📍 Koramangala 5th Block, Bengaluru</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section class="section order-section" id="order-form">
+        <div class="container">
+            <h2 class="section__title section__title--centered">Place Your Order</h2>
+            <p class="section__subtitle">Fill in the details below and we'll have it ready for pickup.</p>
+
+            <!-- URL Param Summary Card -->
+            <div class="order-summary" id="order-summary" style="display: none;">
+                <div class="order-summary__card">
+                    <span class="order-summary__label">You are ordering:</span>
+                    <span class="order-summary__dish" id="summary-dish"></span>
+                    <span class="order-summary__price" id="summary-price"></span>
+                </div>
+            </div>
+
+            <!-- Order Form -->
+            <form
+            class="order-form"
+            id="order-form-element"
+            action="https://formspree.io/f/mock123456"
+            method="POST"
+            novalidate
+            >
+            <!-- Replace the action URL with real Formspree endpoint later -->
+
+            <input type="hidden" name="_next" value="thankyou.html">
+            <input type="hidden" name="_subject" value="New Order from Sugar & Dough Website">
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name" class="form-label">Full Name <span class="required">*</span></label>
+                    <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Your full name"
+                    required
+                    autocomplete="name"
+                    >
+                    <span class="form-error" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number <span class="required">*</span></label>
+                    <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="form-input"
+                    placeholder="10-digit mobile number"
+                    pattern="[0-9]{10}"
+                    inputmode="numeric"
+                    maxlength="10"
+                    required
+                    autocomplete="tel"
+                    >
+                    <span class="form-error" id="phone-error"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="dish-select" class="form-label">Select Dish <span class="required">*</span></label>
+                <select id="dish-select" name="dish" class="form-input form-select" required>
+                    <option value="" disabled selected>— Choose a dish —</option>
+                    <option value="Chocolate Croissant">Chocolate Croissant – ₹120</option>
+                    <option value="Butter Croissant">Butter Croissant – ₹90</option>
+                    <option value="Cinnamon Roll">Cinnamon Roll – ₹110</option>
+                    <option value="Banana Bread Slice">Banana Bread Slice – ₹100</option>
+                    <option value="Blueberry Muffin">Blueberry Muffin – ₹95</option>
+                    <option value="Sugar & Dough Special Cookies (4 pcs)">Special Cookies (4 pcs) – ₹150</option>
+                </select>
+                <span class="form-error" id="dish-error"></span>
+            </div>
+
+            <div class="form-row form-row--three">
+                <div class="form-group">
+                    <label for="quantity" class="form-label">Quantity <span class="required">*</span></label>
+                    <input
+                    type="number"
+                    id="quantity"
+                    name="quantity"
+                    class="form-input"
+                    min="1"
+                    max="10"
+                    value="1"
+                    required
+                    >
+                    <span class="form-error" id="quantity-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="pickup-date" class="form-label">Pickup Date <span class="required">*</span></label>
+                    <input
+                    type="date"
+                    id="pickup-date"
+                    name="pickup_date"
+                    class="form-input"
+                    required
+                    >
+                    <span class="form-error" id="date-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="pickup-time" class="form-label">Pickup Time <span class="required">*</span></label>
+                    <input
+                    type="time"
+                    id="pickup-time"
+                    name="pickup_time"
+                    class="form-input"
+                    min="09:00"
+                    max="21:00"
+                    required
+                    >
+                    <span class="form-error" id="time-error"></span>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="instructions" class="form-label">Special Instructions</label>
+                <textarea
+                id="instructions"
+                name="instructions"
+                class="form-input form-textarea"
+                rows="3"
+                placeholder="Any special requests? (optional)"
+            ></textarea>
+        </div>
+
+        <div class="form-submit-wrapper">
+            <button type="submit" class="btn btn--primary btn--lg form-submit-btn">
+                Place Order 🧁
+            </button>
+            <p class="form-note">You'll receive a confirmation email at rohan@sugaranddough.com</p>
+        </div>
+
+        <!-- Success message (hidden) -->
+        <div class="form-success" id="form-success" style="display: none;">
+            <div class="form-success__card">
+                <span class="form-success__icon">✅</span>
+                <h3 class="form-success__title">Order Placed!</h3>
+                <p class="form-success__text">We'll prepare it for pickup. Check your email for confirmation.</p>
+            </div>
+        </div>
+    </form>
+</div>
+</section>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer" id="footer">
+    <div class="container footer__grid">
+        <div class="footer__brand">
+            <h3 class="footer__logo">Sugar & Dough</h3>
+            <p class="footer__tagline">Freshly baked happiness, delivered daily.</p>
+        </div>
+        <div class="footer__links">
+            <h4 class="footer__heading">Quick Links</h4>
+            <ul class="footer__list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer__social">
+            <h4 class="footer__heading">Follow Us</h4>
+            <div class="footer__social-icons">
+                <a href="https://instagram.com/sugaranddough_bakery" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+                </a>
+                <a href="https://facebook.com/sugaranddough" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container footer__bottom">
+        <p class="footer__copyright">&copy; <span id="current-year"></span> Sugar & Dough. All rights reserved. | Made with ❤️ in Koramangala</p>
+    </div>
+</footer>
+
+<!-- ========== FLOATING WHATSAPP BUTTON ========== -->
+<a
+href="https://wa.me/919876543210?text=Hi%20Sugar%20%26%20Dough%2C%20I%27d%20like%20to%20place%20an%20order%20for%20pickup."
+class="whatsapp-float"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Chat on WhatsApp"
+title="Order via WhatsApp"
+>
+<span class="whatsapp-float__icon">💬</span>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

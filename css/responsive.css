@@ -1,0 +1,219 @@
+/* ========== responsive.css ========== */
+/* Sugar & Dough Bakery - Responsive Breakpoints */
+
+/* Large desktop (1400px and up) - fine-tune container */
+@media (min-width: 1400px) {
+    .container {
+        padding: 0;
+    }
+}
+
+/* Tablet landscape / small desktop (1024px - 1399px) */
+@media (max-width: 1200px) {
+    :root {
+        --font-size-h1: 42px;
+        --font-size-h2: 28px;
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media (max-width: 1023px) {
+    .section {
+        padding: 50px 20px;
+    }
+
+    /* Header mobile adjustments */
+    .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--color-bg);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: transform 0.35s ease-in-out;
+        z-index: 99;
+        display: flex;
+    }
+
+    .nav.active {
+        transform: translateX(0);
+    }
+
+    .nav__list {
+        flex-direction: column;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .nav__link {
+        font-size: 1.2rem;
+        border-bottom: none;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 101;
+    }
+
+    /* Hamburger animation when active */
+    .hamburger.active .hamburger__line:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .hamburger__line:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active .hamburger__line:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Home about grid stacks */
+    .about__grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about__image-wrapper {
+        height: 280px;
+    }
+
+    /* Featured grid 2 columns */
+    .featured__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Menu grid remains auto-fit, but fine */
+    .menu-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    /* Contact page stacks */
+    .contact-info__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-row--three {
+        grid-template-columns: 1fr;
+    }
+
+    .hero__title {
+        font-size: 2.6rem;
+    }
+
+    .cta-banner__inner {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .footer__grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer__social-icons {
+        justify-content: center;
+    }
+}
+
+/* Small tablet / large mobile (481px - 767px) */
+@media (max-width: 768px) {
+    :root {
+        --font-size-h1: 36px;
+        --font-size-h2: 24px;
+        --font-size-body: 15px;
+        --spacing-section: 40px;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .hero {
+        min-height: 55vh;
+    }
+
+    .hero__title {
+        font-size: 2.2rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero__buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card__image-wrapper {
+        height: 200px;
+    }
+
+    .order-form {
+        padding: 24px 20px;
+    }
+
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero__title {
+        font-size: 1.9rem;
+    }
+
+    .section__title {
+        font-size: 1.8rem;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        padding: 10px 22px;
+    }
+
+    .btn--lg {
+        padding: 12px 30px;
+    }
+
+    .order-summary__card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .order-summary__price {
+        margin-left: 0;
+    }
+
+    .page-hero {
+        padding: 40px 0;
+    }
+
+    .page-hero__title {
+        font-size: 2rem;
+    }
+}

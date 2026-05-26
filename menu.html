@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Sugar & Dough Bakery</title>
+    <meta name="description" content="Browse our freshly baked menu — croissants, cinnamon rolls, muffins, cookies, and more. Order online for pickup.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥐</text></svg>">
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo" aria-label="Sugar & Dough Home">
+                <span class="logo__icon">🥐</span>
+                <span class="logo__text">Sugar <span class="logo__amp">&</span> Dough</span>
+            </a>
+
+            <nav class="nav" id="nav" aria-label="Main navigation">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="menu.html" class="nav__link nav__link--active">Menu</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main>
+        <!-- Menu Hero -->
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-hero__title">Our Menu</h1>
+                <p class="page-hero__subtitle">Baked fresh every morning.</p>
+            </div>
+        </section>
+
+        <!-- Menu Grid -->
+        <section class="section menu-section" id="menu">
+            <div class="container">
+                <div class="menu-grid">
+
+                    <!-- Chocolate Croissant -->
+                    <article class="card menu-card">
+                        <div class="card__image-wrapper">
+                            <img
+                            src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=400"
+                            alt="Chocolate Croissant - flaky with dark chocolate filling"
+                            class="card__image"
+                            loading="lazy"
+                            onerror="this.style.opacity='0'; this.parentElement.classList.add('card__image-fallback');"
+                            >
+                            <div class="card__image-fallback-content">🥐</div>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Chocolate Croissant</h3>
+                            <p class="card__desc">Flaky, buttery, with dark chocolate filling.</p>
+                            <p class="card__price">₹120</p>
+                            <a href="contact.html?dish=Chocolate%20Croissant&price=120#order-form" class="btn btn--primary btn--sm card__btn">Order Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Butter Croissant (keeping placeholder image for now) -->
+                    <article class="card menu-card">
+                        <div class="card__image-wrapper">
+                            <img
+                            src="images/butter-croissant.jpg"
+                            alt="Classic Butter Croissant - golden and crisp"
+                            class="card__image"
+                            loading="lazy"
+                            onerror="this.style.opacity='0'; this.parentElement.classList.add('card__image-fallback');"
+                            >
+                            <div class="card__image-fallback-content">🥐</div>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Butter Croissant</h3>
+                            <p class="card__desc">Classic French-style, golden and crisp.</p>
+                            <p class="card__price">₹90</p>
+                            <a href="contact.html?dish=Butter%20Croissant&price=90#order-form" class="btn btn--primary btn--sm card__btn">Order Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Cinnamon Roll -->
+                    <article class="card menu-card">
+                        <div class="card__image-wrapper">
+                            <img
+                            src="https://images.unsplash.com/photo-1509365465985-25d11c17e812?w=400"
+                            alt="Cinnamon Roll with cream cheese glaze"
+                            class="card__image"
+                            loading="lazy"
+                            onerror="this.style.opacity='0'; this.parentElement.classList.add('card__image-fallback');"
+                            >
+                            <div class="card__image-fallback-content">🌀</div>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Cinnamon Roll</h3>
+                            <p class="card__desc">Soft, sticky, with cream cheese glaze.</p>
+                            <p class="card__price">₹110</p>
+                            <a href="contact.html?dish=Cinnamon%20Roll&price=110#order-form" class="btn btn--primary btn--sm card__btn">Order Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Banana Bread Slice (placeholder kept) -->
+                    <article class="card menu-card">
+                        <div class="card__image-wrapper">
+                            <img
+                            src="images/banana-bread.jpg"
+                            alt="Moist banana bread slice with walnuts"
+                            class="card__image"
+                            loading="lazy"
+                            onerror="this.style.opacity='0'; this.parentElement.classList.add('card__image-fallback');"
+                            >
+                            <div class="card__image-fallback-content">🍌</div>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Banana Bread Slice</h3>
+                            <p class="card__desc">Moist, with walnuts.</p>
+                            <p class="card__price">₹100</p>
+                            <a href="contact.html?dish=Banana%20Bread%20Slice&price=100#order-form" class="btn btn--primary btn--sm card__btn">Order Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Blueberry Muffin (placeholder kept) -->
+                    <article class="card menu-card">
+                        <div class="card__image-wrapper">
+                            <img
+                            src="images/blueberry-muffin.jpg"
+                            alt="Blueberry muffin loaded with fresh blueberries"
+                            class="card__image"
+                            loading="lazy"
+                            onerror="this.style.opacity='0'; this.parentElement.classList.add('card__image-fallback');"
+                            >
+                            <div class="card__image-fallback-content">🫐</div>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Blueberry Muffin</h3>
+                            <p class="card__desc">Loaded with fresh blueberries.</p>
+                            <p class="card__price">₹95</p>
+                            <a href="contact.html?dish=Blueberry%20Muffin&price=95#order-form" class="btn btn--primary btn--sm card__btn">Order Now</a>
+                        </div>
+                    </article>
+
+                    <!-- Special Cookies -->
+                    <article class="card menu-card">
+                        <div class="card__image-wrapper">
+                            <img
+                            src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400"
+                            alt="Sugar & Dough Special Cookies - assorted flavours"
+                            class="card__image"
+                            loading="lazy"
+                            onerror="this.style.opacity='0'; this.parentElement.classList.add('card__image-fallback');"
+                            >
+                            <div class="card__image-fallback-content">🍪</div>
+                        </div>
+                        <div class="card__body">
+                            <h3 class="card__title">Special Cookies (4 pcs)</h3>
+                            <p class="card__desc">Assorted flavours.</p>
+                            <p class="card__price">₹150</p>
+                            <a href="contact.html?dish=Sugar%20%26%20Dough%20Special%20Cookies%20(4%20pcs)&price=150#order-form" class="btn btn--primary btn--sm card__btn">Order Now</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" id="footer">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <h3 class="footer__logo">Sugar & Dough</h3>
+                <p class="footer__tagline">Freshly baked happiness, delivered daily.</p>
+            </div>
+            <div class="footer__links">
+                <h4 class="footer__heading">Quick Links</h4>
+                <ul class="footer__list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <h4 class="footer__heading">Follow Us</h4>
+                <div class="footer__social-icons">
+                    <a href="https://instagram.com/sugaranddough_bakery" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+                    </a>
+                    <a href="https://facebook.com/sugaranddough" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer__bottom">
+            <p class="footer__copyright">&copy; <span id="current-year"></span> Sugar & Dough. All rights reserved. | Made with ❤️ in Koramangala</p>
+        </div>
+    </footer>
+
+    <!-- ========== FLOATING WHATSAPP BUTTON ========== -->
+    <a
+    href="https://wa.me/919876543210?text=Hi%20Sugar%20%26%20Dough%2C%20I%27d%20like%20to%20place%20an%20order%20for%20pickup."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+    title="Order via WhatsApp"
+    >
+    <span class="whatsapp-float__icon">💬</span>
+</a>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Placed – Thank You | Sugar & Dough</title>
+    <meta name="description" content="Your order has been successfully placed at Sugar & Dough Bakery. We'll prepare it fresh for pickup!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🥐</text></svg>">
+
+    <!-- Canvas Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__inner">
+            <a href="index.html" class="logo">
+                <span class="logo__icon">🥐</span>
+                <span class="logo__text">Sugar <span class="logo__amp">&</span> Dough</span>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="section thankyou-section">
+            <div class="container thankyou__content">
+                <span class="thankyou__emoji">🧁</span>
+                <h1 class="thankyou__title">Order Placed!</h1>
+                <p class="thankyou__text">Thank you for your order. We'll prepare it fresh for pickup.</p>
+                <p class="thankyou__text">A confirmation will be sent to <strong>rohan@sugaranddough.com</strong>.</p>
+                <div class="thankyou__actions">
+                    <a href="index.html" class="btn btn--primary">Back to Home</a>
+                    <a href="menu.html" class="btn btn--outline">Order More</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__bottom">
+            <p class="footer__copyright">&copy; <span id="current-year"></span> Sugar & Dough. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Trigger confetti only if order was just placed (via sessionStorage flag)
+        window.addEventListener('load', function () {
+            if (sessionStorage.getItem('orderPlaced') === 'true') {
+                // Clear the flag so it doesn't trigger on page refresh
+                sessionStorage.removeItem('orderPlaced');
+
+                // Burst of confetti from left and right
+                const duration = 3 * 1000; // 3 seconds
+                const end = Date.now() + duration;
+
+                (function frame() {
+                    confetti({
+                        particleCount: 3,
+                        angle: 60,
+                        spread: 55,
+                        origin: { x: 0, y: 0.6 },
+                        colors: ['#C85C3E', '#D9A13B', '#4A2A1E', '#FFF5E6']
+                    });
+                    confetti({
+                        particleCount: 3,
+                        angle: 120,
+                        spread: 55,
+                        origin: { x: 1, y: 0.6 },
+                        colors: ['#C85C3E', '#D9A13B', '#4A2A1E', '#FFF5E6']
+                    });
+
+                    if (Date.now() < end) {
+                        requestAnimationFrame(frame);
+                    }
+                }());
+            }
+        });
+    </script>
+</body>
+</html>
