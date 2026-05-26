@@ -218,10 +218,8 @@ See the [LICENSE](LICENSE) file for more details.
 **Sugar & Dough** is a portfolio project showcasing modern web development practices.
 
 ### Contact
-- 📧 Email: your-email@example.com
-- 🌐 Portfolio: [Your Portfolio Website]
-- 💼 LinkedIn: [Your LinkedIn Profile]
-- 🐙 GitHub: [@yourusername](https://github.com/yourusername)
+- 📧 Email: your-affanadil119@gmail.com
+- 🐙 GitHub: [@affan675](https://github.com/affan675)
 
 ---
 
